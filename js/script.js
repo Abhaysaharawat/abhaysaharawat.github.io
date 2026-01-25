@@ -15,6 +15,40 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const body = document.body;
+
+// Check for saved theme or prefer-color-scheme
+const savedTheme = localStorage.getItem('theme') || 'dark';
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Set initial theme
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    body.classList.add('dark-theme');
+    body.classList.remove('light-theme');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+} else {
+    body.classList.add('light-theme');
+    body.classList.remove('dark-theme');
+    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+}
+
+// Toggle theme
+themeToggle.addEventListener('click', () => {
+    if (body.classList.contains('dark-theme')) {
+        body.classList.remove('dark-theme');
+        body.classList.add('light-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.classList.remove('light-theme');
+        body.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
 // Header scroll effect
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
@@ -31,32 +65,6 @@ window.addEventListener('scroll', () => {
     } else {
         backToTop.classList.remove('show');
     }
-});
-
-// Portfolio Filtering
-const filterButtons = document.querySelectorAll('.filter-btn');
-const projectItems = document.querySelectorAll('.project-item');
-
-filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Remove active class from all buttons
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        
-        // Add active class to clicked button
-        button.classList.add('active');
-        
-        // Get filter value
-        const filterValue = button.getAttribute('data-filter');
-        
-        // Show/hide project items based on filter
-        projectItems.forEach(item => {
-            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    });
 });
 
 // Contact form submission
@@ -121,7 +129,24 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Initialize when page loads
+// Add smooth animations for project items on page load
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Portfolio website loaded successfully!');
+    console.log('Dark Theme Portfolio loaded successfully!');
+    
+    const projectItems = document.querySelectorAll('.project-item');
+    
+    // Animate project items on load
+    projectItems.forEach((item, index) => {
+        setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0)';
+        }, index * 100);
+    });
+    
+    // Set initial styles for project items
+    projectItems.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+    });
 });

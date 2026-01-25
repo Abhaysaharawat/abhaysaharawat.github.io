@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhay Saharawat | Portfolio</title>
+    <title>Abhay Saharawat | Full Stack Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="dark-theme">
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container">
@@ -22,12 +22,17 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#certifications">Certifications</a></li>
-                    <li><a href="#opensource">Open Source</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
+                <div class="nav-right">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -39,8 +44,13 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Abhay Saharawat</h1>
-                    <h2>B.Tech Computer Science Student & WordPress Developer</h2>
-                    <p>Passionate about creating scalable web solutions with strong fundamentals in Java, JavaScript, MySQL, and WordPress development. Actively contributing to open-source projects and seeking opportunities to grow as a web developer.</p>
+                    <h2>Full Stack Web Developer</h2>
+                    <p>Full Stack Developer with hands-on experience in Java, Spring Boot, REST APIs, and relational databases. Strong understanding of backend development, authentication (JWT), and scalable application design. Seeking a remote Full Stack Web Development internship.</p>
+                    
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
                     
                     <div class="contact-links">
                         <a href="https://github.com/Abhaysaharawat" class="contact-link" target="_blank">
@@ -62,7 +72,10 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Web Development">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Full Stack Development">
+                        <div class="image-overlay"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,10 +87,10 @@
             <h2 class="section-title">Career Objective</h2>
             <div class="objective-content">
                 <ul>
-                    <li>B.Tech Computer Science student with strong fundamentals in Java, JavaScript, MySQL, HTML, and CSS</li>
-                    <li>Hands-on experience in WordPress development and Git-based version control</li>
-                    <li>Actively learning and contributing to open-source projects on GitHub</li>
-                    <li>Seeking an Associate WordPress Engineer role at rtCamp to work on scalable, remote-first web solutions</li>
+                    <li>Full Stack Web Developer with hands-on experience in Java, Spring Boot, REST APIs, and relational databases</li>
+                    <li>Strong understanding of backend development, authentication (JWT), and scalable application design</li>
+                    <li>Experienced in building end-to-end web applications using HTML, CSS, JavaScript, and MySQL</li>
+                    <li>Actively seeking a remote Full Stack Web Development internship to contribute and grow in production environments</li>
                 </ul>
             </div>
         </div>
@@ -93,7 +106,7 @@
                     <h3 class="education-title">KIET Group of Institutions, Ghaziabad</h3>
                     <span class="education-year">2023 -- 2027</span>
                 </div>
-                <p class="education-subtitle">Bachelor of Technology (B.Tech), 3rd Year</p>
+                <p class="education-subtitle">Bachelor of Technology (B.Tech), Computer Science</p>
                 <div class="education-details">
                     <span>Computer Science Engineering</span>
                     <span>CGPA: 8.35 / 10.0</span>
@@ -102,25 +115,23 @@
             
             <div class="education-item">
                 <div class="education-header">
-                    <h3 class="education-title">Moonlight Public School, Muzaffarnagar (UP)</h3>
+                    <h3 class="education-title">Class XII - CBSE Board</h3>
                     <span class="education-year">2022</span>
                 </div>
-                <p class="education-subtitle">Class XII – CBSE Board</p>
+                <p class="education-subtitle">Science Stream</p>
                 <div class="education-details">
-                    <span>Science Stream</span>
-                    <span>Score: 94%</span>
+                    <span>Percentage: 94%</span>
                 </div>
             </div>
             
             <div class="education-item">
                 <div class="education-header">
-                    <h3 class="education-title">Sunrise Public J.H. School, Muzaffarnagar (UP)</h3>
+                    <h3 class="education-title">Class X - CBSE Board</h3>
                     <span class="education-year">2020</span>
                 </div>
-                <p class="education-subtitle">Class X – CBSE Board</p>
+                <p class="education-subtitle">General Studies</p>
                 <div class="education-details">
-                    <span>General Studies</span>
-                    <span>Score: 89%</span>
+                    <span>Percentage: 89%</span>
                 </div>
             </div>
         </div>
@@ -131,69 +142,74 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="wordpress">WordPress</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="academic">Academic</button>
-            </div>
-            
             <div class="project-grid">
-                <div class="project-item" data-category="wordpress">
-                    <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="WordPress Theme">
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title">
-                            <h3 class="project-name">Custom WordPress Theme Development</h3>
-                            <span class="project-tag">Personal Project</span>
-                        </div>
-                        <p>Developed a custom WordPress theme using PHP, HTML5, CSS3, and JavaScript with dynamic templates and MySQL-backed content management.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">PHP</span>
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">HTML5/CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">MySQL</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item" data-category="web">
+                <div class="project-item">
                     <div class="project-img">
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Chat Application">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <div class="project-info">
                         <div class="project-title">
                             <h3 class="project-name">Real-Time Chat Application</h3>
-                            <span class="project-tag">Personal Project</span>
+                            <span class="project-tag">Spring Boot Project</span>
                         </div>
-                        <p>Built a real-time chat system using Spring Boot, WebSocket (STOMP), MySQL with JWT-based authentication and REST APIs.</p>
+                        <p>Built a real-time chat application using Spring Boot, WebSocket (STOMP), and MySQL. Implemented JWT-based authentication and authorization using Spring Security. Designed 10+ REST APIs for user management and messaging workflows.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Java</span>
                             <span class="tech-tag">Spring Boot</span>
                             <span class="tech-tag">WebSocket</span>
                             <span class="tech-tag">MySQL</span>
                             <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Spring Security</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="project-item" data-category="academic">
+                <div class="project-item">
                     <div class="project-img">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" alt="Accommodation Platform">
+                        <img src="https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Movie Ticket Booking">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <div class="project-info">
                         <div class="project-title">
-                            <h3 class="project-name">Lodgefy: PG Accommodation Platform</h3>
-                            <span class="project-tag">Academic Project</span>
+                            <h3 class="project-name">Cinebooker: Movie Ticket Booking System</h3>
+                            <span class="project-tag">Full Stack Project</span>
                         </div>
-                        <p>Developed a web-based platform for searching and managing PG accommodations with property listings, search filters, and booking management.</p>
+                        <p>Developed a scalable ticket booking system using Spring Boot, REST APIs, and MySQL. Implemented user authentication, seat booking, and admin management modules. Designed role-based access control using JWT authentication.</p>
                         <div class="project-tech">
-                            <span class="tech-tag">HTML/CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">REST APIs</span>
                             <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Authentication</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Doctor Appointment System">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-title">
+                            <h3 class="project-name">Doctor Appointment Management System</h3>
+                            <span class="project-tag">Full Stack Project</span>
+                        </div>
+                        <p>Built a doctor appointment system using Spring Boot and MySQL. Implemented patient, doctor, and admin roles with secure authentication. Designed REST APIs for appointment scheduling and status tracking. Focused on scalable backend architecture.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">REST APIs</span>
+                            <span class="tech-tag">Authentication</span>
                         </div>
                     </div>
                 </div>
@@ -210,32 +226,30 @@
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Python</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Web Technologies</h3>
+                    <h3>Frontend Technologies</h3>
                     <div class="skill-list">
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">WordPress</span>
-                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">React</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                    <h3>Backend Technologies</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">IntelliJ IDEA</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Postman</span>
-                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">JWT Authentication</span>
+                        <span class="skill-tag">Spring Security</span>
+                        <span class="skill-tag">DBMS</span>
                     </div>
                 </div>
                 
@@ -247,44 +261,79 @@
                         <span class="skill-tag">MongoDB</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="section certifications" id="certifications">
-        <div class="container">
-            <h2 class="section-title">Courses & Certifications</h2>
-            
-            <div class="cert-grid">
-                <div class="cert-item">
-                    <div class="cert-header">
-                        <h3>Introduction to MongoDB</h3>
-                        <span class="cert-date">Jan 2025</span>
-                    </div>
-                    <p>MongoDB University – Comprehensive course covering MongoDB fundamentals, data modeling, and query operations.</p>
-                </div>
                 
-                <div class="cert-item">
-                    <div class="cert-header">
-                        <h3>AWS Certified Cloud Practitioner</h3>
-                        <span class="cert-date">Sep 2025</span>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">IntelliJ IDEA</span>
+                        <span class="skill-tag">VS Code</span>
                     </div>
-                    <p>Official Practice Exam: AWS Certified Cloud Practitioner (CLF-C02) – Cloud computing fundamentals and AWS services.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Open Source Section -->
-    <section class="section" id="opensource">
+ <!-- Certifications Section -->
+<section class="section certifications" id="certifications">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        
+        <div class="cert-grid">
+            <div class="cert-item">
+                <div class="cert-header">
+                    <h3>Introduction to MongoDB</h3>
+                    <span class="cert-date">Jan 2025</span>
+                </div>
+                <p>MongoDB University – Comprehensive course covering MongoDB fundamentals, data modeling, and query operations.</p>
+                <div class="cert-links">
+                    <a href="certificates/mongodb-certificate.pdf" class="cert-download" target="_blank">
+                        <i class="fas fa-download"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+            
+            <div class="cert-item">
+                <div class="cert-header">
+                    <h3>AWS Academy Graduate - Generative AI Foundations</h3>
+                    <span class="cert-date">Sep 2025</span>
+                </div>
+                <p>AWS Academy – Gained foundational knowledge in Generative AI and cloud computing concepts.</p>
+                <div class="cert-links">
+                    <a href="certificates/aws-academy-certificate.pdf" class="cert-download" target="_blank">
+                        <i class="fas fa-download"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+            
+            <div class="cert-item">
+                <div class="cert-header">
+                    <h3>AWS Certified Cloud Practitioner (CLF-C02)</h3>
+                    <span class="cert-date">Sep 2025</span>
+                </div>
+                <p>AWS Certified Cloud Practitioner – Practice Level certification demonstrating cloud computing fundamentals.</p>
+                <div class="cert-links">
+                    <a href="images/aws-cloud-certificate.png" class="cert-download" target="_blank">
+                        <i class="fas fa-download"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
         <div class="container">
-            <h2 class="section-title">Open Source Contributions</h2>
-            <div class="opensource-content">
+            <h2 class="section-title">Achievements & Problem Solving</h2>
+            <div class="achievements-content">
                 <ul>
-                    <li>Contributed to open-source repositories on GitHub through documentation and minor fixes</li>
-                    <li>Familiar with pull requests, issue tracking, and collaborative development using Git</li>
-                    <li>Actively participating in GitHub communities to learn and contribute to projects</li>
+                    <li>Solved 300+ Data Structures and Algorithms problems on platforms like LeetCode and GeeksforGeeks</li>
+                    <li>Regularly practice algorithmic problem-solving to improve coding efficiency and backend logic</li>
+                    <li>Active contributor to coding communities and GitHub repositories</li>
+                    <li>Consistent participation in coding contests and hackathons</li>
                 </ul>
             </div>
         </div>
@@ -329,7 +378,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <div class="footer-logo">Abhay<span>Saharawat</span></div>
-                    <p>B.Tech Computer Science student passionate about web development, WordPress, and open-source contributions.</p>
+                    <p>Full Stack Web Developer passionate about building scalable applications with Java, Spring Boot, and modern web technologies.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -341,6 +390,7 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -351,6 +401,7 @@
                         <a href="https://github.com/Abhaysaharawat" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/abhay-saharawat-a823422a8/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a href="mailto:abhaysaharawat266@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+919927273830"><i class="fas fa-phone"></i></a>
                     </div>
                 </div>
             </div>
