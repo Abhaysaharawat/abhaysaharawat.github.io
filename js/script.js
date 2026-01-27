@@ -67,31 +67,96 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form submission
-const contactForm = document.getElementById('contactForm');
+// Contact form submission with Web3Forms
+const form = document.getElementById('contactForm');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-contactForm.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    
-    // Simple validation
-    if (!name || !email || !subject || !message) {
-        alert('Please fill in all fields');
-        return;
+
+    const formData = new FormData(form);
+
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = "0.7";
+    submitBtn.style.cursor = "not-allowed";
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            // Success message with animation
+            showNotification("✅ Success! Your message has been sent. I'll get back to you soon!", "success");
+            form.reset();
+        } else {
+            showNotification("❌ Error: " + data.message, "error");
+        }
+
+    } catch (error) {
+        showNotification("⚠️ Something went wrong. Please try again.", "error");
+        console.error('Form submission error:', error);
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = "1";
+        submitBtn.style.cursor = "pointer";
     }
-    
-    // In a real application, you would send this data to a server
-    // For this demo, we'll just show a success message
-    alert(`Thank you, ${name}! Your message has been sent. I'll get back to you soon.`);
-    
-    // Reset form
-    contactForm.reset();
 });
+
+// Notification Function
+function showNotification(message, type) {
+    // Remove existing notification
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span>${message}</span>
+            <button class="notification-close"><i class="fas fa-times"></i></button>
+        </div>
+    `;
+
+    // Add to body
+    document.body.appendChild(notification);
+
+    // Show notification
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 10);
+
+    // Close button functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    });
+
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.classList.remove('show');
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 300);
+        }
+    }, 5000);
+}
 
 // Back to top functionality
 const backToTopBtn = document.getElementById('backToTop');
@@ -131,7 +196,7 @@ window.addEventListener('scroll', () => {
 
 // Add smooth animations for project items on page load
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Dark Theme Portfolio loaded successfully!');
+    console.log('Portfolio loaded successfully!');
     
     const projectItems = document.querySelectorAll('.project-item');
     

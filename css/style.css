@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #1a1a2e;
     --secondary-color: #64ffda;
@@ -714,116 +715,6 @@ header.scrolled {
     line-height: 1.8;
     font-size: 1rem;
 }
-/* Certifications Section with Images */
-.certifications {
-    background-color: var(--light-color);
-}
-
-.cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 35px;
-}
-
-.cert-item {
-    background-color: var(--light-gray);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    border: 1px solid rgba(100, 255, 218, 0.1);
-}
-
-.cert-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border-color: var(--secondary-color);
-}
-
-.cert-img {
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-}
-
-.cert-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.cert-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(26, 26, 46, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: var(--transition);
-}
-
-.cert-item:hover .cert-overlay {
-    opacity: 1;
-}
-
-.cert-link {
-    color: var(--secondary-color);
-    font-size: 2rem;
-    padding: 15px;
-    background: rgba(100, 255, 218, 0.1);
-    border-radius: 50%;
-    transition: var(--transition);
-}
-
-.cert-link:hover {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-.cert-item:hover .cert-img img {
-    transform: scale(1.05);
-}
-
-.cert-info {
-    padding: 25px;
-}
-
-.cert-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.cert-header h3 {
-    font-size: 1.3rem;
-    color: var(--dark-color);
-    flex: 1;
-}
-
-.cert-date {
-    color: var(--secondary-color);
-    font-size: 0.9rem;
-    font-weight: 500;
-    background-color: rgba(100, 255, 218, 0.1);
-    padding: 5px 12px;
-    border-radius: 15px;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-}
-
-.cert-info p {
-    color: var(--gray-color);
-    line-height: 1.7;
-    font-size: 1rem;
-}
 
 /* Achievements Section */
 .achievements {
@@ -871,6 +762,10 @@ header.scrolled {
     border: 1px solid rgba(100, 255, 218, 0.1);
 }
 
+#contactForm {
+    width: 100%;
+}
+
 .form-group {
     margin-bottom: 30px;
 }
@@ -883,7 +778,9 @@ header.scrolled {
     font-size: 1.1rem;
 }
 
-.form-control {
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
     width: 100%;
     padding: 15px 20px;
     border: 1px solid rgba(100, 255, 218, 0.2);
@@ -895,18 +792,55 @@ header.scrolled {
     color: var(--dark-color);
 }
 
-.form-control:focus {
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
     outline: none;
     border-color: var(--secondary-color);
     box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.2);
     background-color: rgba(100, 255, 218, 0.1);
 }
 
-textarea.form-control {
+.form-group textarea {
     min-height: 180px;
     resize: vertical;
 }
 
+/* Certifications Section Links */
+.cert-links {
+    margin-top: 20px;
+}
+
+.cert-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-weight: 500;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.cert-download:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Hidden input field styling */
+input[type="hidden"] {
+    display: none;
+}
+
+/* Form button styling specific to contact form */
+#contactForm .btn {
+    width: 100%;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+}
 /* Footer */
 footer {
     background-color: #0f0f1a;
@@ -1044,6 +978,69 @@ footer {
 .back-to-top.show {
     opacity: 1;
     visibility: visible;
+}
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--light-gray);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    border-left: 4px solid var(--secondary-color);
+    max-width: 400px;
+    transform: translateX(150%);
+    transition: transform 0.3s ease;
+    z-index: 9999;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    border-left-color: #2ecc71;
+}
+
+.notification.error {
+    border-left-color: #e74c3c;
+}
+
+.notification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.notification-content span {
+    flex: 1;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.notification-close {
+    background: transparent;
+    border: none;
+    color: var(--gray-color);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 5px;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.notification-close:hover {
+    color: var(--secondary-color);
+    transform: rotate(90deg);
+}
+
+/* Form button loading state */
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 /* Responsive Design */
