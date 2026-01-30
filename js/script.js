@@ -287,3 +287,52 @@ window.addEventListener('load', function() {
         document.body.classList.add('content-visible');
     }, 3000);
 });
+
+// Scroll behavior for floating resume button
+window.addEventListener('scroll', function() {
+    const floatingResume = document.getElementById('floatingResume');
+    if (floatingResume) {
+        if (window.scrollY > 300) {
+            floatingResume.style.opacity = '1';
+            floatingResume.style.visibility = 'visible';
+        } else {
+            floatingResume.style.opacity = '0';
+            floatingResume.style.visibility = 'hidden';
+        }
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const name = "Abhay Saharawat";
+    const waveName = document.getElementById('waveName');
+    
+    name.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char === ' ' ? '\u00A0' : char;
+        span.style.setProperty('--i', index);
+        waveName.appendChild(span);
+    });
+});
+
+const profileImage = document.getElementById('profileImage');
+
+profileImage.addEventListener('click', () => {
+    profileImage.classList.add('animated-border');
+    
+    // Remove after animation completes
+    setTimeout(() => {
+        profileImage.classList.remove('animated-border');
+    }, 2000);
+});
+
+// Add hover effect with delay
+let hoverTimeout;
+profileImage.addEventListener('mouseenter', () => {
+    clearTimeout(hoverTimeout);
+    profileImage.classList.add('hover-active');
+});
+
+profileImage.addEventListener('mouseleave', () => {
+    hoverTimeout = setTimeout(() => {
+        profileImage.classList.remove('hover-active');
+    }, 300);
+});
