@@ -50,14 +50,14 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                   <h1 class="wave-text" id="waveName"></h1>
+                        <h1 class="fallback-name" style="display: none;">Abhay Saharawat</h1>
+<h1 class="wave-text glass-name" id="waveName"></h1>
                     <h2>Full Stack Web Developer</h2>
                     <p>Full Stack Developer with hands-on experience in Java, Spring Boot, REST APIs, and relational databases. Strong understanding of backend development, authentication (JWT), and scalable application design. Seeking a remote Full Stack Web Development internship.</p>
                     
                     <div class="hero-btns">
                         <a href="#projects" class="btn">View Projects</a>
                         <a href="#contact" class="btn btn-outline">Contact Me</a>
-                        
                     </div>
                     
                     <div class="contact-links">
@@ -81,7 +81,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="profile-image-container">
-                        <img src="images/myimage.jpeg" alt="Abhay Saharawat" class="profile-img">
+                        <img src="images/myimage.jpeg" alt="Abhay Saharawat" class="profile-img" id="profileImage">
                     </div>
                 </div>
             </div>
@@ -92,12 +92,12 @@
     <section class="section objective" id="objective">
         <div class="container">
             <h2 class="section-title">Career Objective</h2>
-            <div class="objective-content">
+            <div class="objective-content glass-card">
                 <ul>
-                    <li>Full Stack Web Developer with hands-on experience in Java, Spring Boot, REST APIs, and relational databases</li>
-                    <li>Strong understanding of backend development, authentication (JWT), and scalable application design</li>
-                    <li>Experienced in building end-to-end web applications using HTML, CSS, JavaScript, and MySQL</li>
-                    <li>Actively seeking a remote Full Stack Web Development internship to contribute and grow in production environments</li>
+                    <li><i class="fas fa-code"></i> Full Stack Web Developer with hands-on experience in Java, Spring Boot, REST APIs, and relational databases</li>
+                    <li><i class="fas fa-server"></i> Strong understanding of backend development, authentication (JWT), and scalable application design</li>
+                    <li><i class="fas fa-laptop-code"></i> Experienced in building end-to-end web applications using HTML, CSS, JavaScript, and MySQL</li>
+                    <li><i class="fas fa-rocket"></i> Actively seeking a remote Full Stack Web Development internship to contribute and grow in production environments</li>
                 </ul>
             </div>
         </div>
@@ -108,39 +108,39 @@
         <div class="container">
             <h2 class="section-title">Education</h2>
             
-            <div class="education-item">
+            <div class="education-item glass-card">
                 <div class="education-header">
-                    <h3 class="education-title">KIET Group of Institutions, Ghaziabad</h3>
+                    <h3 class="education-title"><i class="fas fa-university"></i> KIET Group of Institutions, Ghaziabad</h3>
                     <span class="education-year">2023 -- 2027</span>
                 </div>
                 <p class="education-subtitle">Bachelor of Technology (B.Tech), Computer Science</p>
                 <div class="education-details">
-                    <span>Computer Science Engineering</span>
-                    <span>CGPA: 8.35 / 10.0</span>
+                    <span><i class="fas fa-graduation-cap"></i> Computer Science Engineering</span>
+                    <span><i class="fas fa-chart-line"></i> CGPA: 8.35 / 10.0</span>
                 </div>
             </div>
             
-            <div class="education-item">
+            <div class="education-item glass-card">
                 <div class="education-header">
-                    <h3 class="education-title">Class XII - CBSE Board</h3>
+                    <h3 class="education-title"><i class="fas fa-school"></i> Class XII - CBSE Board</h3>
                     <span class="education-year">2022</span>
                 </div>
                 <p class="education-subtitle">Science Stream (PCM)</p>
                 <div class="education-details">
-                    <span>School: Moonlight Public School, Muzaffarnagar (UP)</span>
-                    <span>Percentage: 94%</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Moonlight Public School, Muzaffarnagar (UP)</span>
+                    <span><i class="fas fa-percentage"></i> Percentage: 94%</span>
                 </div>
             </div>
             
-            <div class="education-item">
+            <div class="education-item glass-card">
                 <div class="education-header">
-                    <h3 class="education-title">Class X - CBSE Board</h3>
+                    <h3 class="education-title"><i class="fas fa-school"></i> Class X - CBSE Board</h3>
                     <span class="education-year">2020</span>
                 </div>
                 <p class="education-subtitle">Science Stream</p>
                 <div class="education-details">
-                    <span>School: Sunrise Public J.H. School, Muzaffarnagar (UP)</span>
-                    <span>Percentage: 89%</span>
+                    <span><i class="fas fa-map-marker-alt"></i> Sunrise Public J.H. School, Muzaffarnagar (UP)</span>
+                    <span><i class="fas fa-percentage"></i> Percentage: 89%</span>
                 </div>
             </div>
         </div>
@@ -153,7 +153,7 @@
             
             <div class="project-grid">
                 <!-- Project 1 -->
-                <div class="project-item">
+                <div class="project-item glass-card">
                     <div class="project-img">
                         <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1074&q=80" alt="Chat Application">
                         <div class="project-overlay">
@@ -163,27 +163,27 @@
                     </div>
                     <div class="project-info">
                         <div class="project-header">
-                            <h3 class="project-title">Real-Time Chat Application</h3>
+                            <h3 class="project-title"><i class="fas fa-comments"></i> Real-Time Chat Application</h3>
                             <span class="project-tag">Spring Boot Project</span>
                         </div>
                         <p class="project-description">Built a real-time chat application using Spring Boot, WebSocket (STOMP), and MySQL. Implemented JWT-based authentication and authorization using Spring Security. Designed 10+ REST APIs for user management and messaging workflows.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
+                            <span class="tech-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span class="tech-tag"><i class="fas fa-network-wired"></i> WebSocket</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="tech-tag"><i class="fas fa-shield-alt"></i> JWT</span>
+                            <span class="tech-tag"><i class="fas fa-lock"></i> Spring Security</span>
+                        </div>
                         <div class="project-actions">
                             <a href="#" class="btn btn-small" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                             <a href="#" class="btn btn-small btn-outline" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">WebSocket</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Spring Security</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
-                <div class="project-item">
+                <div class="project-item glass-card">
                     <div class="project-img">
                         <img src="https://images.unsplash.com/photo-1489599809516-9827b6d1cf13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Movie Ticket Booking">
                         <div class="project-overlay">
@@ -193,27 +193,27 @@
                     </div>
                     <div class="project-info">
                         <div class="project-header">
-                            <h3 class="project-title">Cinebooker: Movie Ticket Booking System</h3>
+                            <h3 class="project-title"><i class="fas fa-ticket-alt"></i> Cinebooker: Movie Ticket Booking System</h3>
                             <span class="project-tag">Full Stack Project</span>
                         </div>
                         <p class="project-description">Developed a scalable ticket booking system using Spring Boot, REST APIs, and MySQL. Implemented user authentication, seat booking, and admin management modules. Designed role-based access control using JWT authentication.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
+                            <span class="tech-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span class="tech-tag"><i class="fas fa-code"></i> REST APIs</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="tech-tag"><i class="fas fa-shield-alt"></i> JWT</span>
+                            <span class="tech-tag"><i class="fas fa-user-lock"></i> Authentication</span>
+                        </div>
                         <div class="project-actions">
                             <a href="#" class="btn btn-small" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                             <a href="#" class="btn btn-small btn-outline" target="_blank"><i class="fab fa-github"></i> View Code</a>
                         </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">REST APIs</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">JWT</span>
-                            <span class="tech-tag">Authentication</span>
-                        </div>
                     </div>
                 </div>
                 
-                <!-- Project 3: Lodgefy -->
-                <div class="project-item">
+                <!-- Project 3 -->
+                <div class="project-item glass-card">
                     <div class="project-img">
                         <img src="images/lodgefy.png" alt="Lodgefy Hostel Finder">
                         <div class="project-overlay">
@@ -223,26 +223,26 @@
                     </div>
                     <div class="project-info">
                         <div class="project-header">
-                            <h3 class="project-title">Lodgefy - Hostel & PG Finder</h3>
+                            <h3 class="project-title"><i class="fas fa-home"></i> Lodgefy - Hostel & PG Finder</h3>
                             <span class="project-tag">Frontend Project</span>
                         </div>
                         <p class="project-description">Lodgefy is a smart and user-friendly web application designed to help students and working professionals easily find the best hostels and PG accommodations. With features like real-time availability, hostel details, images, filters, and more.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                            <span class="tech-tag"><i class="fas fa-plug"></i> API</span>
+                            <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                            <span class="tech-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                        </div>
                         <div class="project-actions">
                             <a href="https://lodgefy.vercel.app/" class="btn btn-small" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                             <a href="#" class="btn btn-small btn-outline" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Bootstrap</span>
-                            <span class="tech-tag">API</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Project 4 -->
-                <div class="project-item">
+                <div class="project-item glass-card">
                     <div class="project-img">
                         <img src="https://images.unsplash.com/photo-1516549655669-df6654e435de?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Doctor Appointment System">
                         <div class="project-overlay">
@@ -252,20 +252,20 @@
                     </div>
                     <div class="project-info">
                         <div class="project-header">
-                            <h3 class="project-title">Doctor Appointment Management System</h3>
+                            <h3 class="project-title"><i class="fas fa-stethoscope"></i> Doctor Appointment Management System</h3>
                             <span class="project-tag">Full Stack Project</span>
                         </div>
                         <p class="project-description">Built a doctor appointment system using Spring Boot and MySQL. Implemented patient, doctor, and admin roles with secure authentication. Designed REST APIs for appointment scheduling and status tracking. Focused on scalable backend architecture.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
+                            <span class="tech-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="tech-tag"><i class="fas fa-code"></i> REST APIs</span>
+                            <span class="tech-tag"><i class="fas fa-user-lock"></i> Authentication</span>
+                        </div>
                         <div class="project-actions">
                             <a href="#" class="btn btn-small" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
                             <a href="#" class="btn btn-small btn-outline" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">MySQL</span>
-                            <span class="tech-tag">REST APIs</span>
-                            <span class="tech-tag">Authentication</span>
                         </div>
                     </div>
                 </div>
@@ -279,55 +279,55 @@
             <h2 class="section-title">Technical Skills</h2>
             
             <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
                     <div class="skill-list">
-                        <span class="skill-item">Java</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">SQL</span>
-                        <span class="skill-item">Python</span>
+                        <span class="skill-item"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-item"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="skill-item"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-item"><i class="fab fa-python"></i> Python</span>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <h3>Frontend Technologies</h3>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-paint-brush"></i> Frontend Technologies</h3>
                     <div class="skill-list">
-                        <span class="skill-item">HTML5</span>
-                        <span class="skill-item">CSS3</span>
-                        <span class="skill-item">React</span>
-                        <span class="skill-item">Bootstrap</span>
+                        <span class="skill-item"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-item"><i class="fab fa-react"></i> React</span>
+                        <span class="skill-item"><i class="fab fa-bootstrap"></i> Bootstrap</span>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <h3>Backend Technologies</h3>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Backend Technologies</h3>
                     <div class="skill-list">
-                        <span class="skill-item">Spring Boot</span>
-                        <span class="skill-item">REST APIs</span>
-                        <span class="skill-item">JWT Authentication</span>
-                        <span class="skill-item">Spring Security</span>
-                        <span class="skill-item">DBMS</span>
+                        <span class="skill-item"><i class="fas fa-leaf"></i> Spring Boot</span>
+                        <span class="skill-item"><i class="fas fa-code"></i> REST APIs</span>
+                        <span class="skill-item"><i class="fas fa-shield-alt"></i> JWT Authentication</span>
+                        <span class="skill-item"><i class="fas fa-lock"></i> Spring Security</span>
+                        <span class="skill-item"><i class="fas fa-database"></i> DBMS</span>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <h3>Databases</h3>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
                     <div class="skill-list">
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">MongoDB</span>
+                        <span class="skill-item"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-item"><i class="fas fa-database"></i> PostgreSQL</span>
+                        <span class="skill-item"><i class="fas fa-database"></i> MongoDB</span>
                     </div>
                 </div>
                 
-                <div class="skill-category">
-                    <h3>Tools & Platforms</h3>
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
                     <div class="skill-list">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">Postman</span>
-                        <span class="skill-item">IntelliJ IDEA</span>
-                        <span class="skill-item">VS Code</span>
-                        <span class="skill-item">AWS</span>
+                        <span class="skill-item"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-item"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-item"><i class="fas fa-code"></i> Postman</span>
+                        <span class="skill-item"><i class="fas fa-lightbulb"></i> IntelliJ IDEA</span>
+                        <span class="skill-item"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="skill-item"><i class="fab fa-aws"></i> AWS</span>
                     </div>
                 </div>
             </div>
@@ -340,9 +340,9 @@
             <h2 class="section-title">Certifications</h2>
             
             <div class="cert-grid">
-                <div class="cert-item">
+                <div class="cert-item glass-card">
                     <div class="cert-header">
-                        <h3 class="cert-title">Introduction to MongoDB</h3>
+                        <h3 class="cert-title"><i class="fas fa-database"></i> Introduction to MongoDB</h3>
                         <span class="cert-date">Jan 2025</span>
                     </div>
                     <p class="cert-description">MongoDB University – Comprehensive course covering MongoDB fundamentals, data modeling, and query operations.</p>
@@ -353,9 +353,9 @@
                     </div>
                 </div>
                 
-                <div class="cert-item">
+                <div class="cert-item glass-card">
                     <div class="cert-header">
-                        <h3 class="cert-title">AWS Academy Graduate - Generative AI Foundations</h3>
+                        <h3 class="cert-title"><i class="fas fa-robot"></i> AWS Academy Graduate - Generative AI Foundations</h3>
                         <span class="cert-date">Sep 2025</span>
                     </div>
                     <p class="cert-description">AWS Academy – Gained foundational knowledge in Generative AI and cloud computing concepts.</p>
@@ -366,9 +366,9 @@
                     </div>
                 </div>
                 
-                <div class="cert-item">
+                <div class="cert-item glass-card">
                     <div class="cert-header">
-                        <h3 class="cert-title">AWS Certified Cloud Practitioner (CLF-C02)</h3>
+                        <h3 class="cert-title"><i class="fab fa-aws"></i> AWS Certified Cloud Practitioner (CLF-C02)</h3>
                         <span class="cert-date">Sep 2025</span>
                     </div>
                     <p class="cert-description">AWS Certified Cloud Practitioner – Practice Level certification demonstrating cloud computing fundamentals.</p>
@@ -386,13 +386,13 @@
     <section class="section achievements" id="achievements">
         <div class="container">
             <h2 class="section-title">Achievements & Problem Solving</h2>
-            <div class="achievements-content">
+            <div class="achievements-content glass-card">
                 <ul>
-                    <li>Solved 300+ Data Structures and Algorithms problems on platforms like LeetCode and GeeksforGeeks</li>
-                    <li>Regularly practice algorithmic problem-solving to improve coding efficiency and backend logic</li>
-                    <li>Active contributor to coding communities and GitHub repositories</li>
-                    <li>Consistent participation in coding contests</li>
-                    <li>Strong analytical and problem-solving skills demonstrated through project implementations</li>
+                    <li><i class="fas fa-trophy"></i> Solved 300+ Data Structures and Algorithms problems on platforms like LeetCode and GeeksforGeeks</li>
+                    <li><i class="fas fa-chart-line"></i> Regularly practice algorithmic problem-solving to improve coding efficiency and backend logic</li>
+                    <li><i class="fas fa-users"></i> Active contributor to coding communities and GitHub repositories</li>
+                    <li><i class="fas fa-code"></i> Consistent participation in coding contests</li>
+                    <li><i class="fas fa-brain"></i> Strong analytical and problem-solving skills demonstrated through project implementations</li>
                 </ul>
             </div>
         </div>
@@ -404,30 +404,30 @@
             <h2 class="section-title">Get In Touch</h2>
             
             <div class="contact-form-wrapper">
-                <form id="contactForm" class="contact-form">
+                <form id="contactForm" class="contact-form glass-card">
                     <input type="hidden" name="access_key" value="c166c0c2-9876-4988-b6dd-bd57e737872d">
 
                     <div class="form-group">
-                        <label class="form-label">Full Name</label>
+                        <label class="form-label"><i class="fas fa-user"></i> Full Name</label>
                         <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Email Address</label>
+                        <label class="form-label"><i class="fas fa-envelope"></i> Email Address</label>
                         <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Subject</label>
+                        <label class="form-label"><i class="fas fa-tag"></i> Subject</label>
                         <input type="text" name="subject" class="form-control" placeholder="Subject" required>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-label">Message</label>
+                        <label class="form-label"><i class="fas fa-comment"></i> Message</label>
                         <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
                     </div>
 
-                    <button type="submit" class="btn form-submit">Send Message</button>
+                    <button type="submit" class="btn form-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
                 </form>
             </div>
         </div>
@@ -445,14 +445,14 @@
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#objective">Career Objective</a></li>
-                        <li><a href="#education">Education</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#certifications">Certifications</a></li>
-                        <li><a href="#achievements">Achievements</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#objective"><i class="fas fa-bullseye"></i> Career Objective</a></li>
+                        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                        <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                        <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
+                        <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievements</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                     </ul>
                 </div>
                 
@@ -485,12 +485,14 @@
     <div class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </div>
+    
+    <!-- Floating Resume Button -->
     <div class="floating-resume" id="floatingResume">
-    <a href="resume/Abhay_Saharawat_Resume.pdf" download title="Download Resume">
-        <i class="fas fa-file-download"></i>
-        <span>Resume</span>
-    </a>
-</div>
+        <a href="resume/Abhay_Saharawat_Resume.pdf" download title="Download Resume">
+            <i class="fas fa-file-download"></i>
+            <span>Resume</span>
+        </a>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

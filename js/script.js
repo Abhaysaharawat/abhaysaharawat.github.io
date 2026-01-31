@@ -2,6 +2,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize portfolio
     initializePortfolio();
+    
+    // Initialize wave text animation
+    initializeWaveText();
 });
 
 function initializePortfolio() {
@@ -195,43 +198,26 @@ function initializePortfolio() {
 
         window.addEventListener('scroll', () => {
             const scrollY = window.pageYOffset;
+            let currentSection = '';
             
             sections.forEach(section => {
                 const sectionHeight = section.offsetHeight;
                 const sectionTop = section.offsetTop - 100;
                 const sectionId = section.getAttribute('id');
-                const correspondingLink = document.querySelector(`.nav-links a[href*="${sectionId}"]`);
                 
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    if (correspondingLink) {
-                        document.querySelectorAll('.nav-links a').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        correspondingLink.classList.add('active');
-                    }
+                    currentSection = sectionId;
+                }
+            });
+            
+            // Update active class
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(currentSection)) {
+                    link.classList.add('active');
                 }
             });
         });
-
-        // Add typing animation to hero title
-        const heroTitle = document.querySelector('.hero-text h1');
-        if (heroTitle && !heroTitle.classList.contains('typing-animation')) {
-            const text = heroTitle.textContent;
-            heroTitle.textContent = '';
-            heroTitle.classList.add('typing-animation');
-            
-            let i = 0;
-            const typeWriter = () => {
-                if (i < text.length) {
-                    heroTitle.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                } else {
-                    heroTitle.style.borderRight = 'none';
-                }
-            };
-            typeWriter();
-        }
 
         // Now show the content and hide the loader
         document.body.classList.remove('content-hidden');
@@ -269,6 +255,100 @@ function initializePortfolio() {
     }, 1000); // 1 second delay to show the loader
 }
 
+// Initialize wave text animation
+function initializeWaveText() {
+    const name = "Abhay Saharawat";
+    const waveName = document.getElementById('waveName');
+    
+    if (waveName) {
+        name.split('').forEach((char, index) => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.style.setProperty('--i', index);
+            waveName.appendChild(span);
+        });
+    }
+}
+
+// Profile image hover effects
+const profileImage = document.getElementById('profileImage');
+if (profileImage) {
+    profileImage.addEventListener('click', () => {
+        profileImage.classList.add('animated-border');
+        
+        // Remove after animation completes
+        setTimeout(() => {
+            profileImage.classList.remove('animated-border');
+        }, 2000);
+    });
+
+    // Add hover effect with delay
+    let hoverTimeout;
+    profileImage.addEventListener('mouseenter', () => {
+        clearTimeout(hoverTimeout);
+        profileImage.classList.add('hover-active');
+    });
+
+    profileImage.addEventListener('mouseleave', () => {
+        hoverTimeout = setTimeout(() => {
+            profileImage.classList.remove('hover-active');
+        }, 300);
+    });
+}
+
+// Floating resume button visibility on scroll
+window.addEventListener('scroll', function() {
+    const floatingResume = document.getElementById('floatingResume');
+    if (floatingResume) {
+        if (window.scrollY > 300) {
+            floatingResume.style.opacity = '1';
+            floatingResume.style.visibility = 'visible';
+            floatingResume.style.transform = 'translateY(0)';
+        } else {
+            floatingResume.style.opacity = '0';
+            floatingResume.style.visibility = 'hidden';
+            floatingResume.style.transform = 'translateY(20px)';
+        }
+    }
+});
+
+// Add smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Add intersection observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+        }
+    });
+}, observerOptions);
+
+// Observe all glass cards
+document.querySelectorAll('.glass-card').forEach(card => {
+    observer.observe(card);
+});
+
 // Simple fallback in case of errors
 window.addEventListener('load', function() {
     // If portfolio isn't visible after 3 seconds, force it
@@ -286,53 +366,4 @@ window.addEventListener('load', function() {
         document.body.classList.remove('content-hidden');
         document.body.classList.add('content-visible');
     }, 3000);
-});
-
-// Scroll behavior for floating resume button
-window.addEventListener('scroll', function() {
-    const floatingResume = document.getElementById('floatingResume');
-    if (floatingResume) {
-        if (window.scrollY > 300) {
-            floatingResume.style.opacity = '1';
-            floatingResume.style.visibility = 'visible';
-        } else {
-            floatingResume.style.opacity = '0';
-            floatingResume.style.visibility = 'hidden';
-        }
-    }
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const name = "Abhay Saharawat";
-    const waveName = document.getElementById('waveName');
-    
-    name.split('').forEach((char, index) => {
-        const span = document.createElement('span');
-        span.textContent = char === ' ' ? '\u00A0' : char;
-        span.style.setProperty('--i', index);
-        waveName.appendChild(span);
-    });
-});
-
-const profileImage = document.getElementById('profileImage');
-
-profileImage.addEventListener('click', () => {
-    profileImage.classList.add('animated-border');
-    
-    // Remove after animation completes
-    setTimeout(() => {
-        profileImage.classList.remove('animated-border');
-    }, 2000);
-});
-
-// Add hover effect with delay
-let hoverTimeout;
-profileImage.addEventListener('mouseenter', () => {
-    clearTimeout(hoverTimeout);
-    profileImage.classList.add('hover-active');
-});
-
-profileImage.addEventListener('mouseleave', () => {
-    hoverTimeout = setTimeout(() => {
-        profileImage.classList.remove('hover-active');
-    }, 300);
 });
